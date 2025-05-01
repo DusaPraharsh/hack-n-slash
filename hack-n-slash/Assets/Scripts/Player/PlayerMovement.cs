@@ -26,7 +26,7 @@ public class PlayerMovement : MonoBehaviour
     private bool canDash = true;
     private bool isDashing;
     public float dashPower;
-    private float dashTime = 0.3f;
+    private float dashTime = 0.4f;
     private float dashCooldown = 1f;
 
     private bool isWallSliding;
