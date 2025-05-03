@@ -7,11 +7,14 @@ public class Health : MonoBehaviour
     public int currentHealth;
 
     public HealthBar healthBar;
+    private Animator anim;
+    private bool dead;
 
-    void Start()
+    void Awake()
     {
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
+        anim = GetComponent<Animator>();
     }
 
     void Update()
@@ -26,5 +29,19 @@ public class Health : MonoBehaviour
     {
         currentHealth -= damage;
         healthBar.SetHealth(currentHealth);
+
+        if (currentHealth > 0)
+        {
+            anim.SetTrigger("hurt");
+        }
+        else
+        {
+            if (!dead)
+            {
+                anim.SetTrigger("death");
+                GetComponent<PlayerMovement>().enabled = false;
+                dead = true;
+            }
+        }
     }
 }
