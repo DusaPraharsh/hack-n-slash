@@ -326,13 +326,13 @@ AnimatorStateMachine:
     m_Position: {x: 510, y: 260, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 8228768947544843702}
-    m_Position: {x: 920, y: 220, z: 0}
-  - serializedVersion: 1
-    m_State: {fileID: 3111015712578556253}
     m_Position: {x: 920, y: 170, z: 0}
   - serializedVersion: 1
-    m_State: {fileID: -2936827757159430438}
+    m_State: {fileID: 3111015712578556253}
     m_Position: {x: 920, y: 120, z: 0}
+  - serializedVersion: 1
+    m_State: {fileID: -2936827757159430438}
+    m_Position: {x: 920, y: 70, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -4861467506486299529}
     m_Position: {x: 70, y: 60, z: 0}
@@ -344,13 +344,13 @@ AnimatorStateMachine:
     m_Position: {x: 70, y: 160, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -3341310733906477227}
-    m_Position: {x: 920, y: 70, z: 0}
+    m_Position: {x: 920, y: 20, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -383247875904825965}
-    m_Position: {x: 770, y: -30, z: 0}
+    m_Position: {x: 500, y: -80, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -9068015645621616845}
-    m_Position: {x: 230, y: -20, z: 0}
+    m_Position: {x: 70, y: 10, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions:
   - {fileID: 6728335979427887385}
@@ -365,9 +365,9 @@ AnimatorStateMachine:
   m_EntryTransitions: []
   m_StateMachineTransitions: {}
   m_StateMachineBehaviours: []
-  m_AnyStatePosition: {x: 520, y: 60, z: 0}
-  m_EntryPosition: {x: 70, y: 220, z: 0}
-  m_ExitPosition: {x: 1450, y: 150, z: 0}
+  m_AnyStatePosition: {x: 520, y: 30, z: 0}
+  m_EntryPosition: {x: 300, y: 220, z: 0}
+  m_ExitPosition: {x: 1220, y: -30, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
   m_DefaultState: {fileID: -3034466082211949130}
 --- !u!1101 &-1802160873793528334
@@ -520,7 +520,7 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.5
+  m_TransitionDuration: 0.7
   m_TransitionOffset: 0
   m_ExitTime: 0
   m_HasExitTime: 1
