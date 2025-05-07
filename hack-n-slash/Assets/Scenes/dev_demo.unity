@@ -6076,7 +6076,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackCooldown: 1
-  range: 10
+  range: 8
   colliderDistance: 0.25
   damage: 15
   boxCollider: {fileID: 983350280}
