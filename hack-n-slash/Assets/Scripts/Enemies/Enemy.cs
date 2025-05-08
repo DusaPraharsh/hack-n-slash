@@ -13,9 +13,12 @@ public class Enemy : MonoBehaviour
     private Animator anim;
     private Health playerHealth;
 
+    private EnemyPatrol enemyPatrol;
+
     private void Awake()
     {
         anim = GetComponent<Animator>();
+        enemyPatrol = GetComponentInParent<EnemyPatrol>();
     }
 
     private void Update()
@@ -29,6 +32,11 @@ public class Enemy : MonoBehaviour
                 cooldownTimer = 0;
                 anim.SetTrigger("attack");
             }
+        }
+
+        if (enemyPatrol != null)
+        {
+            enemyPatrol.enabled = !PlayerInSight();
         }
     }
 
