@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Enemy : MonoBehaviour
 {
@@ -15,6 +16,8 @@ public class Enemy : MonoBehaviour
 
     private EnemyPatrol enemyPatrol;
 
+    public Canvas canvas;
+
     private void Awake()
     {
         anim = GetComponent<Animator>();
@@ -23,10 +26,12 @@ public class Enemy : MonoBehaviour
 
     private void Update()
     {
+        canvas.enabled = false;
         cooldownTimer += Time.deltaTime;
 
         if (PlayerInSight())
         {
+            canvas.enabled = true;
             if (cooldownTimer >= attackCooldown)
             {
                 cooldownTimer = 0;

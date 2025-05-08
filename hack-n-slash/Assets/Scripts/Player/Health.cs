@@ -11,6 +11,8 @@ public class Health : MonoBehaviour
     private Animator anim;
     private bool dead;
 
+    public Behaviour[] components;
+
     void Awake()
     {
         currentHealth = maxHealth;
@@ -40,17 +42,19 @@ public class Health : MonoBehaviour
             if (!dead)
             {
                 anim.SetTrigger("death");
-                if (GetComponent<PlayerMovement>() != null)
-                    GetComponent<PlayerMovement>().enabled = false;
 
-                if (GetComponentInParent<EnemyPatrol>() != null)
-                    GetComponentInParent<EnemyPatrol>().enabled = false;
-                
-                if (GetComponent<Enemy>() != null)
-                    GetComponent<Enemy>().enabled = false;
+                foreach (Behaviour component in components)
+                {
+                    component.enabled = false;
+                }
 
                 dead = true;
             }
         }
+    }
+
+    private void Deactivate()
+    {
+        gameObject.SetActive(false);
     }
 }
