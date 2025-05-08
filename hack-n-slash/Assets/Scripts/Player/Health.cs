@@ -57,4 +57,17 @@ public class Health : MonoBehaviour
     {
         gameObject.SetActive(false);
     }
+
+    public void Respawn()
+    {
+        dead = false;
+        currentHealth = maxHealth;
+        anim.ResetTrigger("death");
+        anim.Play("idle");
+
+        foreach (Behaviour component in components)
+        {
+            component.enabled = true;
+        }
+    }
 }
