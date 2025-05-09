@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Selection : MonoBehaviour
 {
@@ -19,9 +20,14 @@ public class Selection : MonoBehaviour
         {
             ChangePosition(-1);
         }
-        else if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))
+        if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))
         {
             ChangePosition(1);
+        }
+
+        if (Input.GetKeyDown(KeyCode.KeypadEnter) || Input.GetKeyDown(KeyCode.E))
+        {
+            Interact();
         }
     }
 
@@ -42,5 +48,12 @@ public class Selection : MonoBehaviour
         }
 
         rect.position = new Vector3(rect.position.x, options[currentPosition].position.y, 0);
+    }
+
+    private void Interact()
+    {
+        SoundManager.instance.PlaySound(interactSound);
+
+        options[currentPosition].GetComponent<Button>().onClick.Invoke();
     }
 }

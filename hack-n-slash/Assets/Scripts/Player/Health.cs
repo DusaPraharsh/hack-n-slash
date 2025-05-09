@@ -23,14 +23,6 @@ public class Health : MonoBehaviour
         anim = GetComponent<Animator>();
     }
 
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            TakeDamage(20);
-        }
-    }
-
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
