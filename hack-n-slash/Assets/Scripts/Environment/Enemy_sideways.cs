@@ -9,8 +9,6 @@ public class Enemy_sideways : MonoBehaviour
     private float leftEdge;
     private float rightEdge;
 
-    public AudioClip sawSound;
-
     private void Awake()
     {
         leftEdge = transform.position.x - movementDistance;
@@ -19,7 +17,6 @@ public class Enemy_sideways : MonoBehaviour
 
     private void Update()
     {
-        SoundManager.instance.PlaySound(sawSound);
         if (movingLeft)
         {
             if (transform.position.x > leftEdge)
