@@ -17,12 +17,12 @@ public class MainMenu : MonoBehaviour
 
     public void Volume()
     {
-
+        SoundManager.instance.ChangeSoundVolume(0.2f);
     }
 
     public void Music()
     {
-        
+        SoundManager.instance.ChangeMusicVolume(0.2f);
     }
 
     public void Quit()
