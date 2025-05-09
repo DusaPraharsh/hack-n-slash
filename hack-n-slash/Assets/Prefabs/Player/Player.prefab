@@ -466,6 +466,10 @@ MonoBehaviour:
   speed: 7
   jumpPower: 10
   dashPower: 12
+  meeleAttack: {fileID: 8300000, guid: e4b59edffbe089d4c89f71fe5f79fa78, type: 3}
+  heavyAttack: {fileID: 8300000, guid: 2e988e62914e04d45bb37cb12d928cfe, type: 3}
+  dashSound: {fileID: 8300000, guid: cbfe29bc147d82343877ca2dafeff255, type: 3}
+  jumpSound: {fileID: 8300000, guid: ef37ffb2119ba0a4c8b34e2173e75596, type: 3}
 --- !u!114 &7799283442266386830
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -483,6 +487,8 @@ MonoBehaviour:
   healthBar: {fileID: 2008298275342274585}
   components:
   - {fileID: 9133921132565071059}
+  hurtSound: {fileID: 8300000, guid: 1b9aea28ec4ac5641ba62639e7724fe5, type: 3}
+  deathSound: {fileID: 8300000, guid: a384bbb8a67d05e408a2cfaba01de00a, type: 3}
 --- !u!114 &1937961147212720088
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -495,6 +501,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c3c498cde13a7746a85494d0f054723, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawnPoint: {fileID: 0}
 --- !u!1 &6785806561524277585
 GameObject:
   m_ObjectHideFlags: 0

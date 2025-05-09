@@ -149,3 +149,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bounce: 15
   anim: {fileID: 0}
+  jumpSound: {fileID: 8300000, guid: ef37ffb2119ba0a4c8b34e2173e75596, type: 3}

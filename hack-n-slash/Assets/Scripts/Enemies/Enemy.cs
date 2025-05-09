@@ -18,6 +18,8 @@ public class Enemy : MonoBehaviour
 
     public Canvas canvas;
 
+    public AudioClip attackSound;
+
     private void Awake()
     {
         anim = GetComponent<Animator>();
@@ -32,8 +34,9 @@ public class Enemy : MonoBehaviour
         if (PlayerInSight())
         {
             canvas.enabled = true;
-            if (cooldownTimer >= attackCooldown)
+            if (cooldownTimer >= attackCooldown && playerHealth.currentHealth > 0)
             {
+                SoundManager.instance.PlaySound(attackSound);
                 cooldownTimer = 0;
                 anim.SetTrigger("attack");
             }

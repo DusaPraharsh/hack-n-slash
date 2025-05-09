@@ -127,6 +127,7 @@ MonoBehaviour:
   damage: 5
   movementDistance: 1
   speed: 3
+  sawSound: {fileID: 0}
 --- !u!58 &5901984113875112613
 CircleCollider2D:
   m_ObjectHideFlags: 0

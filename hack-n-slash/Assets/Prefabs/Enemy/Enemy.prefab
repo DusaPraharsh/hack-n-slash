@@ -215,6 +215,8 @@ MonoBehaviour:
   components:
   - {fileID: 8965394273564665416}
   - {fileID: 0}
+  hurtSound: {fileID: 8300000, guid: 1b9aea28ec4ac5641ba62639e7724fe5, type: 3}
+  deathSound: {fileID: 8300000, guid: b3c2a0b2cae5e9a46b3904d0b2c73d74, type: 3}
 --- !u!114 &8965394273564665416
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -236,6 +238,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4096
   canvas: {fileID: 5506962591540278976}
+  attackSound: {fileID: 8300000, guid: 43823d7c04a530b4da1bee44726c6f5d, type: 3}
 --- !u!114 &456720623745029172
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -47,6 +47,11 @@ public class PlayerMovement : MonoBehaviour
     private float wallJumpDuration = 0.4f;
     private Vector2 wallJumpPower = new Vector2(5f, 10f);
 
+    public AudioClip meeleAttack;
+    public AudioClip heavyAttack;
+    public AudioClip dashSound;
+    public AudioClip jumpSound;
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -123,6 +128,7 @@ public class PlayerMovement : MonoBehaviour
 
         if(jumpBufferCounter > 0f && cayoteTimeCounter > 0f)
         {
+            SoundManager.instance.PlaySound(jumpSound);
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpPower);
             anim.SetTrigger("jump");
             jumpBufferCounter = 0f;
@@ -141,12 +147,14 @@ public class PlayerMovement : MonoBehaviour
         {
             if(!isAttacking)
             {
+                SoundManager.instance.PlaySound(meeleAttack);
                 anim.SetTrigger("attack_1");
                 isAttacking = true;
                 StartCoroutine(ComboWindow());
             }
             else if(canCombo)
             {
+                SoundManager.instance.PlaySound(meeleAttack);
                 anim.SetTrigger("attack_2");
                 canCombo = false;
             }
@@ -154,6 +162,7 @@ public class PlayerMovement : MonoBehaviour
 
         if(Input.GetMouseButtonDown(1))
         {
+            SoundManager.instance.PlaySound(heavyAttack);
             anim.SetTrigger("heavy_attack");
         }
     }
@@ -170,6 +179,7 @@ public class PlayerMovement : MonoBehaviour
 
     private IEnumerator Dash()
     {
+        SoundManager.instance.PlaySound(dashSound);
         canDash = false;
         isDashing = true;
         float originalGravity = rb.gravityScale;
@@ -220,6 +230,7 @@ public class PlayerMovement : MonoBehaviour
             isWallJumping = true;
             rb.linearVelocity = new Vector2(wallJumpDirection * wallJumpPower.x, wallJumpPower.y);
             wallJumpCounter = 0f;
+            SoundManager.instance.PlaySound(jumpSound);
             anim.SetTrigger("wall_jump");
 
             if(transform.localScale.x != wallJumpDirection)

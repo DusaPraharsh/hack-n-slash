@@ -13,6 +13,9 @@ public class Health : MonoBehaviour
 
     public Behaviour[] components;
 
+    public AudioClip hurtSound;
+    public AudioClip deathSound;
+
     void Awake()
     {
         currentHealth = maxHealth;
@@ -35,12 +38,14 @@ public class Health : MonoBehaviour
 
         if (currentHealth > 0)
         {
+            SoundManager.instance.PlaySound(hurtSound);
             anim.SetTrigger("hurt");
         }
         else
         {
             if (!dead)
             {
+                SoundManager.instance.PlaySound(deathSound);
                 anim.SetTrigger("death");
 
                 foreach (Behaviour component in components)
