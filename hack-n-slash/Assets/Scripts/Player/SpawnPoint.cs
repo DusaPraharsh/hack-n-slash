@@ -4,14 +4,23 @@ public class SpawnPoint : MonoBehaviour
 {
     public Transform spawnPoint;
     private Health playerHealth;
+    private UIManager uiManager;
 
     private void Awake()
     {
         playerHealth = GetComponent<Health>();
+        uiManager = FindFirstObjectByType<UIManager>();
     }
 
     public void Spawn()
     {
+        if (spawnPoint == null)
+        {
+            uiManager.GameOver();
+            
+            return;
+        }
+
         transform.position = spawnPoint.position;
         playerHealth.Respawn();
     }
