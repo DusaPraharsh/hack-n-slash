@@ -1596,7 +1596,7 @@ Transform:
   m_GameObject: {fileID: 384829305}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.92, y: -2.81, z: 0}
+  m_LocalPosition: {x: -8.92, y: -2.91, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2512,6 +2512,7 @@ GameObject:
   - component: {fileID: 589099328}
   - component: {fileID: 589099330}
   - component: {fileID: 589099329}
+  - component: {fileID: 589099331}
   m_Layer: 5
   m_Name: Selection
   m_TagString: Untagged
@@ -2576,6 +2577,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 589099327}
   m_CullTransparentMesh: 1
+--- !u!114 &589099331
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 589099327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97ffc521eb3fd21489632b91467fc63b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  options:
+  - {fileID: 1189867471}
+  - {fileID: 1764531072}
+  - {fileID: 295904147}
+  selectionSound: {fileID: 8300000, guid: 2727cffbfbb4d0540bd72f5881c250ee, type: 3}
+  interactSound: {fileID: 8300000, guid: d51b195fe1e401c40880d0fae601e284, type: 3}
 --- !u!1 &591721953
 GameObject:
   m_ObjectHideFlags: 0
@@ -2678,7 +2697,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &602374070
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9784,7 +9803,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c3c498cde13a7746a85494d0f054723, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnPoint: {fileID: 384829306}
+  spawnPoint: {fileID: 0}
 --- !u!1 &3957638985510671457
 GameObject:
   m_ObjectHideFlags: 0
