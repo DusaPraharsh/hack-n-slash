@@ -56,5 +56,6 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "hack-n-slash.sln"
+    "dotnet.defaultSolution": "hack-n-slash.sln",
+    "editor.codeLens": false
 }
